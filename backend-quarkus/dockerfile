@@ -1,0 +1,10 @@
+# Dockerfile
+FROM quay.io/quarkus/quarkus-distroless-image:3.2.8.Final-java17 AS runner
+
+COPY target/university-admin-1.0.0-runner.jar /app/university-admin-runner.jar
+
+EXPOSE 8080
+
+USER 1001
+
+CMD ["java", "-jar", "/app/university-admin-runner.jar"]
