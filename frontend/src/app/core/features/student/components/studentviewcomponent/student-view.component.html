@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>Student Details</h2>
+
+    <div *ngIf="student">
+        <p><strong>ID:</strong> {{ student.id }}</p>
+        <p><strong>Name:</strong> {{ student.name }}</p>
+        <p><strong>Email:</strong> {{ student.email }}</p>
+        <p><strong>Registration:</strong> {{ student.registration }}</p>
+    </div>
+
+    <button class="btn btn-secondary mt-3" (click)="goBack()">Back to List</button>
+</div>

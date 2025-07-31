@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Create Student</h2>
+
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+            <label>Name:</label>
+            <input class="form-control" formControlName="name" />
+            <div *ngIf="studentForm.get('name')?.invalid && studentForm.get('name')?.touched" class="text-danger">
+                Name is required.
+            </div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Email:</label>
+            <input class="form-control" formControlName="email" />
+            <div *ngIf="studentForm.get('email')?.invalid && studentForm.get('email')?.touched" class="text-danger">
+                A valid email is required.
+            </div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Registration:</label>
+            <input class="form-control" formControlName="registration" />
+            <div *ngIf="studentForm.get('registration')?.invalid && studentForm.get('registration')?.touched" class="text-danger">
+                Registration is required.
+            </div>
+        </div>
+
+        <button class="btn btn-success" type="submit" [disabled]="studentForm.invalid">
+            Save
+        </button>
+        <button class="btn btn-secondary ms-2" type="button" (click)="router.navigate(['/students'])">
+            Cancel
+        </button>
+    </form>
+</div>

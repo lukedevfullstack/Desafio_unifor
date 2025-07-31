@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Student List</h2>
+
+    <button (click)="router.navigate(['/students/create'])" class="btn btn-primary mb-3">
+        Add New Student
+    </button>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Registration</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{ student.name }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.registration }}</td>
+                <td>
+                    <button (click)="viewStudent(student.id)" class="btn btn-sm btn-info me-1">View</button>
+                    <button (click)="editStudent(student.id)" class="btn btn-sm btn-warning me-1">Edit</button>
+                    <button (click)="deleteStudent(student.id)" class="btn btn-sm btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
