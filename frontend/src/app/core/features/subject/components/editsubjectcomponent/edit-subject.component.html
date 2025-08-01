@@ -1,0 +1,10 @@
+<h2>Edit Subject</h2>
+<form (ngSubmit)="update()">
+    <label>Name:</label>
+    <input [(ngModel)]="subject.name" name="name" required />
+
+    <label>Code:</label>
+    <input [(ngModel)]="subject.code" name="code" required />
+
+    <button type="submit">Update</button>
+</form>

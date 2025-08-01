@@ -1,0 +1,7 @@
+<div *ngIf="subject; else loading">
+    <h2>{{ subject.name }}</h2>
+    <p><strong>Code:</strong> {{ subject.code }}</p>
+</div>
+<ng-template #loading>
+    <p>Loading subject details...</p>
+</ng-template>
