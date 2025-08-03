@@ -1,0 +1,7 @@
+<h2>Create Semester</h2>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <input formControlName="name" placeholder="Name" />
+    <input formControlName="startDate" type="date" />
+    <input formControlName="endDate" type="date" />
+    <button type="submit">Save</button>
+</form>
