@@ -1,0 +1,10 @@
+<div class="p-4">
+    <h2 class="text-xl font-bold mb-4">Courses</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div *ngFor="let course of courses" class="bg-white shadow rounded p-4">
+            <h3 class="text-lg font-semibold">{{ course.name }}</h3>
+            <p class="text-sm text-gray-600">{{ course.code }}</p>
+            <p class="text-sm mt-2">{{ course.description }}</p>
+        </div>
+    </div>
+</div>

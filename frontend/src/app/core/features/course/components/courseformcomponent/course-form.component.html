@@ -1,0 +1,17 @@
+<div class="max-w-xl mx-auto p-4 bg-white shadow rounded">
+    <form (ngSubmit)="onSubmit()" class="space-y-4">
+        <div>
+            <label class="block text-sm font-medium">Name</label>
+            <input type="text" [(ngModel)]="course.name" name="name" required class="input input-bordered w-full" />
+        </div>
+        <div>
+            <label class="block text-sm font-medium">Code</label>
+            <input type="text" [(ngModel)]="course.code" name="code" required class="input input-bordered w-full" />
+        </div>
+        <div>
+            <label class="block text-sm font-medium">Description</label>
+            <textarea [(ngModel)]="course.description" name="description" class="textarea textarea-bordered w-full"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-full">Save</button>
+    </form>
+</div>

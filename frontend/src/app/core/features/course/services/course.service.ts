@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Course } from './course.model';
 import { Observable } from 'rxjs';
+import { Course } from './course.model';
 
-@Injectable({
-    providedIn: 'root',
-})
+@Injectable({ providedIn: 'root' })
 export class CourseService {
-    private baseUrl = 'http://localhost:8080/api/courses';
+    private baseUrl = '/api/courses';
 
     constructor(private http: HttpClient) { }
 

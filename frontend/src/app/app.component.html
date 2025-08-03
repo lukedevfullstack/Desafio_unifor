@@ -1,0 +1,22 @@
+<div class="min-h-screen flex flex-col">
+    <header class="bg-blue-700 text-white px-4 py-3 flex justify-between items-center">
+        <span class="text-lg font-semibold">Sistema Acadêmico</span>
+        <button class="bg-blue-900 px-3 py-1 rounded-md hover:bg-blue-800">Sair</button>
+    </header>
+
+    <div class="flex flex-1 flex-col lg:flex-row">
+        <nav class="bg-gray-100 w-full lg:w-64 p-4 space-y-2">
+            <a routerLink="/users" class="block text-blue-700 hover:underline">Usuários</a>
+            <a routerLink="/students" class="block text-blue-700 hover:underline">Alunos</a>
+            <a routerLink="/teachers" class="block text-blue-700 hover:underline">Professores</a>
+            <a routerLink="/subjects" class="block text-blue-700 hover:underline">Disciplinas</a>
+            <a routerLink="/semesters" class="block text-blue-700 hover:underline">Semestres</a>
+            <a routerLink="/grades" class="block text-blue-700 hover:underline">Notas</a>
+            <a routerLink="/courses" class="block text-blue-700 hover:underline">Cursos</a>
+        </nav>
+
+        <main class="flex-1 p-4 bg-white">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="p-4 max-w-xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">Edit Course</h2>
+    <form (ngSubmit)="onSubmit()" *ngIf="course" class="space-y-4">
+        <div>
+            <label class="block mb-1">Name</label>
+            <input [(ngModel)]="course.name" name="name" class="input input-bordered w-full" required />
+        </div>
+        <div>
+            <label class="block mb-1">Code</label>
+            <input [(ngModel)]="course.code" name="code" class="input input-bordered w-full" required />
+        </div>
+        <div>
+            <label class="block mb-1">Description</label>
+            <textarea [(ngModel)]="course.description" name="description" class="textarea textarea-bordered w-full" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

@@ -1,8 +1,10 @@
-<h2>Edit Grade</h2>
-<form (ngSubmit)="save()">
-    <label>Student ID: <input [(ngModel)]="grade.studentId" name="studentId" /></label>
-    <label>Subject ID: <input [(ngModel)]="grade.subjectId" name="subjectId" /></label>
-    <label>Semester ID: <input [(ngModel)]="grade.semesterId" name="semesterId" /></label>
-    <label>Grade: <input [(ngModel)]="grade.grade" name="grade" /></label>
-    <button type="submit">Update</button>
-</form>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <h2>Edit Grade</h2>
+    <form (ngSubmit)="save()">
+        <label>Student ID: <input [(ngModel)]="grade.studentId" name="studentId" /></label>
+        <label>Subject ID: <input [(ngModel)]="grade.subjectId" name="subjectId" /></label>
+        <label>Semester ID: <input [(ngModel)]="grade.semesterId" name="semesterId" /></label>
+        <label>Grade: <input [(ngModel)]="grade.grade" name="grade" /></label>
+        <button type="submit">Update</button>
+    </form>
+</div>
